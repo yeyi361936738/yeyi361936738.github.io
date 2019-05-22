@@ -5,18 +5,19 @@
   
 
   
-  <title>叶毅的博客</title>
+  <title>JavaScript基础：Date | 叶毅的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="博客、前端、vue、JavaScript、html、css、scss、webpack">
-<meta property="og:type" content="website">
-<meta property="og:title" content="叶毅的博客">
-<meta property="og:url" content="http://millerye.site/index.html">
+  <meta name="description" content="JavaScript基础系列主要讲解一些基础知识，之后会有进阶篇的文章。 对于 Date 对象这一块一直没有去总结，今天这篇文章便围绕着 Date 做一些简单的讲解，在文章的最后会留下我的一些封装函数。 new 一个 Date">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript基础：Date">
+<meta property="og:url" content="http://millerye.site/2019/05/22/Date/index.html">
 <meta property="og:site_name" content="叶毅的博客">
-<meta property="og:description" content="博客、前端、vue、JavaScript、html、css、scss、webpack">
+<meta property="og:description" content="JavaScript基础系列主要讲解一些基础知识，之后会有进阶篇的文章。 对于 Date 对象这一块一直没有去总结，今天这篇文章便围绕着 Date 做一些简单的讲解，在文章的最后会留下我的一些封装函数。 new 一个 Date">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-22T12:18:26.016Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="叶毅的博客">
-<meta name="twitter:description" content="博客、前端、vue、JavaScript、html、css、scss、webpack">
+<meta name="twitter:title" content="JavaScript基础：Date">
+<meta name="twitter:description" content="JavaScript基础系列主要讲解一些基础知识，之后会有进阶篇的文章。 对于 Date 对象这一块一直没有去总结，今天这篇文章便围绕着 Date 做一些简单的讲解，在文章的最后会留下我的一些封装函数。 new 一个 Date">
   
     <link rel="alternate" href="/atom.xml" title="叶毅的博客" type="application/atom+xml">
   
@@ -63,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Date" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Date" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/22/Date/" class="article-date">
   <time datetime="2019-05-22T12:13:22.000Z" itemprop="datePublished">2019-05-22</time>
@@ -78,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/Date/">JavaScript基础：Date</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript基础：Date
     </h1>
   
 
@@ -99,56 +98,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/16/hello-world/" class="article-date">
-  <time datetime="2019-05-16T12:06:51.595Z" itemprop="datePublished">2019-05-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/16/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2019/05/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://millerye.site/2019/05/16/hello-world/" data-id="cjvz71oj90000vhqgh1thgs9m" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
